@@ -1,20 +1,25 @@
 import express from "express";
-import { pageHome } from "./pages/home.js";
-import { pageAbout } from "./pages/about.js";
-import { pageContactUs } from "./pages/contactUs.js";
-import { pageServices } from "./pages/services.js";
-import { page404 } from "./pages/404.js";
+import { PageHome } from "./pages/PageHome.js";
+import { Page404 } from "./pages/Page404.js";
+import { PageAbout } from "./pages/PageAbout.js";
+
 
 const app = express();
 const port = 4811;
 
-app.get("/", (req, res) => res.send(pageHome()));
-app.get("/about", (req, res) => res.send(pageAbout()));
-app.get("/contact-us", (req, res) => res.send(pageContactUs()));
-app.get("/services", (req, res) => res.send(pageServices()));
+app.get("/", (req, res) => {
+  const page = new PageHome();
+  res.send(page.render());
+});
+
+app.get("/about", (req, res) => {
+  const page = new PageAbout();
+  res.send(page.render());
+});
 
 app.use((req, res, next) => {
-  res.status(404).send(page404());
+  const page = new Page404();
+  res.status(404).send(page.render());
 });
 
 app.listen(port, () => {
