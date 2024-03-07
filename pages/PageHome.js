@@ -1,6 +1,10 @@
 import { PageTemplate } from "../lib/PageTemplate.js";
 
-class PageHome extends PageTemplate {
+    class PageHome extends PageTemplate {
+        constructor() {
+        super();
+        this.page = "home";
+  }
   main() {
     return `
             <main>
