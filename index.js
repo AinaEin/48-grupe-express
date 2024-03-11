@@ -6,6 +6,7 @@ import { Page404 } from "./pages/Page404.js";
 import { PageAbout } from "./pages/PageAbout.js";
 import { PageServicesList } from "./pages/PageServicesList.js";
 import { PageServiceInner } from "./pages/PageServiceInner.js";
+import { PagesServiceTeam } from "./pages/PageServiceTeam.js";
 
 const app = express();
 const port = 4811;
@@ -29,6 +30,11 @@ app.get("/services", (req, res) => {
 
 app.get("/services/:serviceId", (req, res) => {
   const page = new PageServiceInner(req.params);
+  res.send(page.render());
+});
+
+app.get("/services/:serviceId/:teamService", (req, res) => {
+  const page = new PagesServiceTeam(req.params);
   res.send(page.render());
 });
 
