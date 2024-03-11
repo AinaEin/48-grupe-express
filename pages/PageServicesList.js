@@ -15,7 +15,7 @@ class PageServicesList extends PageTemplate {
       listHTML += `
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img class="card-img-top" style="height: 150px; object-fit: cover;" src="/img/Jiggling-jellyfish-tile.jpg" alt="Service image">
+                        <img class="card-img-top" style="height: 150px; object-fit: cover;" src="${service.image}" alt="Service image">
                         <div class="card-body">
                             <h3>${service.title}</h3>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -36,7 +36,9 @@ class PageServicesList extends PageTemplate {
                     <div class="row py-lg-5">
                         <div class="col-lg-6 col-md-8 mx-auto">
                             <h1 class="fw-light">Services we provide</h1>
-                            <p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+                            <p class="lead text-body-secondary">
+                                Elevate your digital presence with our integrated services: DevOps for streamlined development processes, Web Development for tailored online solutions, and UX services for captivating user experiences. Unleash innovation, optimize performance, and ensure user satisfaction with our comprehensive suite of expertise.
+                            </p>
                             <p>
                                 <a href="#" class="btn btn-primary my-2">Main call to action</a>
                                 <a href="#" class="btn btn-secondary my-2">Secondary action</a>

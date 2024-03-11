@@ -1,7 +1,7 @@
 import { PageTemplate } from "../lib/PageTemplate.js";
 import { servicesData } from "../data/servicesData.js";
 
-class PagesServiceTeam extends PageTemplate {
+class PageServiceTeam extends PageTemplate {
   serviceObj;
 
   constructor(params) {
@@ -16,7 +16,7 @@ class PagesServiceTeam extends PageTemplate {
                 <section class="container py-5">
                     <h1 class="display-5 fw-bold">${this.serviceObj.titleTeam}</h1>
                     <p class="col-md-8 fs-4">${this.serviceObj.projectText}</p>
-                    <a href="${"#"}" class="btn btn-primary btn-lg">Projects</a>
+                    <a href="${this.serviceObj.hrefProject}" class="btn btn-primary btn-lg">Projects</a>
                 </section>
             </main>`;
   }
@@ -31,4 +31,4 @@ class PagesServiceTeam extends PageTemplate {
   }
 }
 
-export { PagesServiceTeam };
+export { PageServiceTeam };

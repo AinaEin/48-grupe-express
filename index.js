@@ -6,7 +6,8 @@ import { Page404 } from "./pages/Page404.js";
 import { PageAbout } from "./pages/PageAbout.js";
 import { PageServicesList } from "./pages/PageServicesList.js";
 import { PageServiceInner } from "./pages/PageServiceInner.js";
-import { PagesServiceTeam } from "./pages/PageServiceTeam.js";
+import { PageServiceTeam } from "./pages/PageServiceTeam.js";
+import { PageProjects } from "./pages/PageProjects.js";
 
 const app = express();
 const port = 4811;
@@ -34,7 +35,13 @@ app.get("/services/:serviceId", (req, res) => {
 });
 
 app.get("/services/:serviceId/:teamService", (req, res) => {
-  const page = new PagesServiceTeam(req.params);
+  const page = new PageServiceTeam(req.params);
+  res.send(page.render());
+});
+
+
+app.get("/services/:serviceId/:teamService/projects", (req, res) => {
+  const page = new PageProjects(req.params);
   res.send(page.render());
 });
 
