@@ -1,8 +1,10 @@
 let requestCount = 0;
 
 function helpMe(req, res, next) {
+  req.timeItHasHappened = Date.now();
+
   requestCount++;
-  consol.log(requestCount, req.url);
+  console.log(req.timeItHasHappened, ">", requestCount, req.url);
 
   next();
 }
