@@ -38,7 +38,21 @@ const servicesData = [
       "Craft immersive digital experiences that resonate with your audience through our UX project expertise. Our seasoned designers delve into user research, wireframing, and prototyping to create intuitive and visually stunning interfaces. From empathetic design thinking to meticulous user testing, our UX projects guarantee an engaging and memorable journey for your users, fostering brand loyalty and satisfaction.",
     image: "/img/webdevelopment.png",
     titleProject: "Projects",
-    hrefProjects: "/services/web-development/web-development-team/projects",
+    hrefProject: "/services/web-development/web-development-team/projects",
+    imageProject: [
+      {
+        titleProject: "Projects",
+        imgSrc: "/img/webdevelopment.png",
+      },
+      {
+        titleProject: "Projects",
+        imgSrc: "/img/webdevelopmentproject1.jpg",
+      },
+      {
+        titleProject: "Projects",
+        imgSrc: "/img/webdevelopmentproject2.jpg",
+      },
+    ],
   },
   {
     id: "ux",
@@ -52,7 +66,21 @@ const servicesData = [
       "Revolutionize your online presence with our web development prowess. Our team specializes in creating bespoke websites and applications tailored to your unique needs. From responsive design for optimal user experience to robust backend development for seamless functionality, our web development projects ensure your digital footprint is not just an online presence but a powerful tool driving your business forward.",
     image: "/img/uxdesign.jpg",
     titleProject: "Projects",
-    hrefProjects: "/services/ux/ux-team/projects",
+    hrefProject: "/services/ux/ux-team/projects",
+    imageProject: [
+      {
+        titleProject: "Projects",
+        imgSrc: "/img/uxproject.png",
+      },
+      {
+        titleProject: "Projects",
+        imgSrc: "/img/uxproject1.png",
+      },
+      {
+        titleProject: "Projects",
+        imgSrc: "/img/uxproject2.jpg",
+      },
+    ],
   },
 ];
 

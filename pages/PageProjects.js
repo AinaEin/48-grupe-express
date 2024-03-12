@@ -27,7 +27,7 @@ class PageProjects extends PageTemplate {
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a href="${service.hrefProjects}" class="btn btn-primary my-2">Read more</a>
+                                    <a href="${service.hrefProject}" class="btn btn-primary my-2">Read more</a>
                                 </div>
                                 <small class="text-body-secondary">9 mins</small>
                             </div>
