@@ -58,9 +58,7 @@ class PageServiceInner extends PageTemplate {
       }
     }
 
-    return serviceObj
-      ? this.serviceHTML(serviceObj)
-      : this.serviceNotFoundHTML();
+    return serviceObj ? this.serviceHTML(serviceObj) : this.serviceNotFoundHTML();
   }
 }
 
