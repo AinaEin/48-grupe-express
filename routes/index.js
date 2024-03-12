@@ -7,7 +7,7 @@ import { PageServiceTeam } from "../pages/PageServiceTeam.js";
 import { PageProjects } from "../pages/PageProjects.js";
 import { Page404 } from "../pages/Page404.js";
 
-const router = Router ();
+const router = Router();
 
 router.get("/", (req, res) => {
   const page = new PageHome();
