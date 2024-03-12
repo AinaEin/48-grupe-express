@@ -1,6 +1,6 @@
 console.clear();
 
-import express, { request } from "express";
+import express from "express";
 import { helpMe } from "./middlewares/helpMe.js";
 import { router } from "./routes/index.js";
 import { apiRouter } from "./api/index.js";
