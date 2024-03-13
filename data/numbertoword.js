@@ -15,7 +15,7 @@ function timeToWords(hours, minutes, seconds) {
     let words = numbersToWords[hours] + ' hour' + (hours !== 1 ? 's' : '');
     words += ' and ' + numbersToWords[minutes] + ' minute' + (minutes !== 1 ? 's' : '');
     words += ' and ' + numbersToWords[seconds] + ' second' + (seconds !== 1 ? "s" : "");
-    console.log(words)
+
 
     return words;
 };
