@@ -2,6 +2,7 @@ import { Router } from "express";
 import { timeToWords }  from "../data/numbertoword.js";
 import { formatTimeNumber } from "../lib/formatTimeNumbers.js";
 import { formatTimeAsText, timeValueTitle } from "../lib/formatTimeAsText.js";
+import { lastLetter } from "../lib/formatNameEnding.js";
 
 const apiRouter = Router();
 
@@ -66,6 +67,14 @@ apiRouter.get("/api/time-to-text/:hh/:mm/:ss", (req, res) => {
   const seconds = +req.params.ss;
   res.send(timeToWords(hours, minutes, seconds));
 });
+
+apiRouter.get('/api/customer-welcome/:name', (req, res) => {
+  const name = req.params.name;
+  console.log(name);
+  const newName = lastLetter(name);
+  console.log(newName);
+  res.status(400).send('Sveiki, ' + newName);
+})
 
 
 apiRouter.get("/api/math/:veiksmas", (req, res) => {
