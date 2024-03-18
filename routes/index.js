@@ -6,6 +6,7 @@ import { PageServiceInner } from "../pages/PageServiceInner.js";
 import { PageServiceTeam } from "../pages/PageServiceTeam.js";
 import { PageProjects } from "../pages/PageProjects.js";
 import { Page404 } from "../pages/Page404.js";
+import { PageCalc } from "../pages/PageCalc.js";
 
 const router = Router();
 
@@ -24,8 +25,13 @@ router.get("/services", (req, res) => {
   res.send(page.render());
 });
 
+router.get("/calc", (req, res) => {
+  const page = new PageCalc();
+  res.send(page.render());
+});
+
 router.get("/services/:serviceId", (req, res) => {
-  const page = new PageServiceInner(req.params);
+  const page = new PageCalc(req.params);
   res.send(page.render());
 });
 
